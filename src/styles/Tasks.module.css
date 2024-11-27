@@ -1,0 +1,10 @@
+.tasks {
+    padding: 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 32px;
+    margin-top: 128px;
+    background-color: rgba(26, 45, 66, .5);
+    backdrop-filter: blur(10px);
+
+}

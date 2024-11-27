@@ -1,0 +1,264 @@
+.modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    transition: all 1s;
+    position: fixed;
+    z-index: 2;
+}
+
+.active {
+    display: block;
+    animation: modalLoading 1s ease;
+
+}
+
+.notactive {
+    display: none;
+}
+
+@keyframes modalLoading {
+    0% {
+        clip-path: circle(0);
+    }
+    100% {
+        clip-path: circle(100%);
+
+    }
+}
+
+@keyframes NotmodalLoading {
+    0% {
+        clip-path: circle(100%);
+    }
+    100% {
+        clip-path: circle(0);
+
+    }
+}
+
+
+.modalExit {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+}
+
+.modalExitBtn {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    background: none;
+    border: none;
+    transition: transform .5s;
+}
+
+.modalExitBtn:hover {
+    transform: scale(1.1);
+}
+
+.modalExitBtn:active {
+    transform: scale(0.9);
+}
+.addTaskWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.textEditWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.addTaskWrapper form {
+    display: flex;
+    max-width: 50%;
+    max-height: 450px;
+    height: 100%;
+    transform: scale(1.1);
+    padding: 8px 16px;
+    background-color: #AAB7B7; /* Changed from #A78D78 to #AAB7B7 */
+    color: #1A2D42; /* Changed from black to #1A2D42 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform .5s ease-in-out;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.addTaskWrapper form:hover {
+    transform: scale(1.2);
+
+}
+
+.input {
+    width: 100%;
+    border-bottom: 1px solid #1A2D42; /* Changed from black to #1A2D42 */
+}
+
+.input input{
+    width: 100%;
+
+}
+
+.addTaskWrapper form input,
+.addTaskWrapper form textarea {
+    margin: 0;
+    padding: 8px 16px;
+    background-color: #D4D8DD; /* Changed from #fff to #D4D8DD */
+    border: 2px solid #C0C8C2; /* Changed from #ccc to #C0C8C2 */
+    font-size: 16px;
+    color: #2E4156; /* Changed from #555 to #2E4156 */
+    text-align: center;
+    margin-bottom: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.addTaskWrapper form input:focus,
+.addTaskWrapper form textarea:focus {
+    outline: none;
+}
+
+.addTaskWrapper form textarea {
+    text-align: start;
+    margin-top: 16px;
+    resize: vertical;
+    max-height: 100%;
+    resize: none;
+    font-family: 'Arial', sans-serif;
+}
+
+.addTaskWrapper form textarea:focus {
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+}
+
+
+.taskApp {
+    background: linear-gradient(#D4D8DD, #C0C8C2, #AAB7B7, #2E4156, #1A2D42); /* Adjusted to match the color palette */
+    color: #D4D8DD; /* Changed from #fff to #D4D8DD */
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    animation: loading 1s ease;
+}
+
+.taskAppWrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 96px;
+    align-items: center;
+}
+
+
+
+.taskAppWrapper h1{
+    font-size: 64px;
+    font-family: 'Arial', sans-serif;
+    color: #2E4156; /* Changed from #2E4156 to #2E4156 */
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 32px;
+    transition: all .5s ;
+}
+
+.taskAppWrapper h1:hover{
+    cursor: pointer;
+    text-shadow: 0 0 10px #AAB7B7, 0 0 20px #AAB7B7, 0 0 30px #C0C8C2, 0 0 40px #C0C8C2, 0 0 50px #C0C8C2;
+}
+
+.taskAdd {
+    margin-top: 32px;
+    font-size: 24px;
+    padding: 12px 24px;
+    border: 1px #D4D8DD solid; /* Changed from white to #D4D8DD */
+    color: #1A2D42; /* Changed from #fff to #1A2D42 */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.taskAdd:hover {
+    background-color: #2E4156; /* Changed from #6E473B to #2E4156 */
+    transform: translateY(-4px);
+    color: #D4D8DD;
+    box-shadow: 0 0 10px #AAB7B7, 0 0 20px #AAB7B7, 0 0 30px #1A2D42, 0 0 40px #1A2D42, 0 0 50px #1A2D42;
+}
+
+.taskAdd:active {
+    transform: scale(0.95);
+    background-color: #AAB7B7; /* Changed from #50a5dc to #AAB7B7 */
+    box-shadow: 0 0 5px #D4D8DD, 0 0 10px #D4D8DD, 0 0 15px #1A2D42, 0 0 20px #1A2D42, 0 0 25px #1A2D42;
+}
+
+.taskAdd:focus {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px #D4D8DD, 0 0 20px #D4D8DD, 0 0 30px #1A2D42, 0 0 40px #1A2D42, 0 0 50px #1A2D42;
+    }
+    50% {
+        box-shadow: 0 0 20px #D4D8DD, 0 0 30px #D4D8DD, 0 0 40px #1A2D42, 0 0 50px #1A2D42, 0 0 60px #1A2D42;
+    }
+    100% {
+        box-shadow: 0 0 10px #D4D8DD, 0 0 20px #D4D8DD, 0 0 30px #1A2D42, 0 0 40px #1A2D42, 0 0 50px #1A2D42;
+    }
+}
+
+.submit {
+    margin-top: 32px;
+    font-size: 24px;
+    padding: 12px 24px;
+    border: 1px #D4D8DD solid; /* Changed from white to #D4D8DD */
+    color: #1A2D42; /* Changed from #fff to #1A2D42 */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit:hover {
+    color: #D4D8DD; /* Changed from #fff to #1A2D42 */
+    background-color: #2E4156; /* Changed from #50a5dc to #2E4156 */
+    border: 1px #1A2D42 solid; /* Changed from white to #D4D8DD */
+
+    box-shadow: 0 0 5px #D4D8DD, 0 0 5px #D4D8DD, 0 0 15px #1A2D42, 0 0 20px #1A2D42, 0 0 25px #1A2D42;
+}
+
+.submit:active {
+    transform: scale(0.95);
+    background-color: #AAB7B7; /* Changed from #003d82 to #AAB7B7 */
+    box-shadow: 0 0 5px #D4D8DD, 0 0 10px #D4D8DD, 0 0 15px #1A2D42, 0 0 20px #1A2D42, 0 0 25px #1A2D42;
+}
+
+.submit:focus {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px #D4D8DD, 0 0 20px #D4D8DD, 0 0 30px #1A2D42, 0 0 40px #1A2D42, 0 0 50px #1A2D42;
+    }
+    50% {
+        box-shadow: 0 0 20px #D4D8DD, 0 0 30px #D4D8DD, 0 0 40px #1A2D42, 0 0 50px #1A2D42, 0 0 60px #1A2D42;
+    }
+    100% {
+        box-shadow: 0 0 10px #D4D8DD, 0 0 20px #D4D8DD, 0 0 30px #1A2D42, 0 0 40px #1A2D42, 0 0 50px #1A2D42;
+    }
+}
