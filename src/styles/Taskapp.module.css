@@ -262,3 +262,7 @@
         box-shadow: 0 0 10px #D4D8DD, 0 0 20px #D4D8DD, 0 0 30px #1A2D42, 0 0 40px #1A2D42, 0 0 50px #1A2D42;
     }
 }
+
+.colorsBtn {
+    background-color:#fff ;
+}

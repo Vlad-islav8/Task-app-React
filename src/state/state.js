@@ -6,16 +6,15 @@ let store = {
     state: {
         tasks: [
             
-
         ],
     },
-
+ 
     rerenderTree(callback) {
         observer = callback
     },
 
-    addTask(headValue, textValue) {
-        this.state.tasks.push({ head: headValue, text: textValue, id: this.state.tasks.length })
+    addTask(headValue, textValue, BgColor) {
+        this.state.tasks.push({ head: headValue, text: textValue, id: this.state.tasks.length, Bgcolor: BgColor})
         observer(this)
 
     },

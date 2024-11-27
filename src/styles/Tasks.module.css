@@ -1,4 +1,5 @@
 .tasks {
+    min-height: 100%;
     padding: 32px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);

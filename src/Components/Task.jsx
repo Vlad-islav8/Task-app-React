@@ -26,7 +26,7 @@ export function Task(props) {
     
 
     let EditMode = () => {
-        console.log('click')
+        console.log(props.Bgcolor)
         if (edit == styles.notactive) {
             setEdit(styles.active)
             setNotedit(styles.notactive)
@@ -39,7 +39,7 @@ export function Task(props) {
 
 
     return (
-        <div className={styles.task}>
+        <div className={styles.task} style={{backgroundColor: props.Bgcolor}}>
             <div className={styles.taskInfo}>
                 <h2 className={`${notedit}`}>{headValue}</h2>
                 <input value={headValue} onChange={handleHead}  ref={editValue} type="text"  className={`${edit}`}/>
@@ -54,5 +54,4 @@ export function Task(props) {
             </div>
         </div>
     )
-
 }
