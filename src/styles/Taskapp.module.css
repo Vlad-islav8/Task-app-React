@@ -12,7 +12,6 @@
 .active {
     display: block;
     animation: modalLoading 1s ease;
-
 }
 
 .notactive {
@@ -25,7 +24,6 @@
     }
     100% {
         clip-path: circle(100%);
-
     }
 }
 
@@ -35,10 +33,8 @@
     }
     100% {
         clip-path: circle(0);
-
     }
 }
-
 
 .modalExit {
     display: flex;
@@ -62,6 +58,7 @@
 .modalExitBtn:active {
     transform: scale(0.9);
 }
+
 .addTaskWrapper {
     display: flex;
     width: 100%;
@@ -75,7 +72,6 @@
     flex-direction: column;
 }
 
-
 .addTaskWrapper form {
     display: flex;
     max-width: 50%;
@@ -83,8 +79,8 @@
     height: 100%;
     transform: scale(1.1);
     padding: 8px 16px;
-    background-color: #AAB7B7; /* Changed from #A78D78 to #AAB7B7 */
-    color: #1A2D42; /* Changed from black to #1A2D42 */
+    background-color: #AAB7B7;
+    color: #1A2D42;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,27 +93,25 @@
 
 .addTaskWrapper form:hover {
     transform: scale(1.2);
-
 }
 
 .input {
     width: 100%;
-    border-bottom: 1px solid #1A2D42; /* Changed from black to #1A2D42 */
+    border-bottom: 1px solid #1A2D42;
 }
 
 .input input{
     width: 100%;
-
 }
 
 .addTaskWrapper form input,
 .addTaskWrapper form textarea {
     margin: 0;
     padding: 8px 16px;
-    background-color: #D4D8DD; /* Changed from #fff to #D4D8DD */
-    border: 2px solid #C0C8C2; /* Changed from #ccc to #C0C8C2 */
+    background-color: #D4D8DD;
+    border: 2px solid #C0C8C2;
     font-size: 16px;
-    color: #2E4156; /* Changed from #555 to #2E4156 */
+    color: #2E4156;
     text-align: center;
     margin-bottom: 16px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -148,10 +142,9 @@
     resize: none;
 }
 
-
 .taskApp {
-    background: linear-gradient(#D4D8DD, #C0C8C2, #AAB7B7, #2E4156, #1A2D42); /* Adjusted to match the color palette */
-    color: #D4D8DD; /* Changed from #fff to #D4D8DD */
+    background: linear-gradient(#D4D8DD, #C0C8C2, #AAB7B7, #2E4156, #1A2D42);
+    color: #D4D8DD;
     min-height: 100vh;
     height: 100%;
     width: 100%;
@@ -165,12 +158,10 @@
     align-items: center;
 }
 
-
-
 .taskAppWrapper h1{
     font-size: 64px;
     font-family: 'Arial', sans-serif;
-    color: #2E4156; /* Changed from #2E4156 to #2E4156 */
+    color: #2E4156;
     font-weight: 700;
     text-align: center;
     margin-bottom: 32px;
@@ -186,15 +177,15 @@
     margin-top: 32px;
     font-size: 24px;
     padding: 12px 24px;
-    border: 1px #D4D8DD solid; /* Changed from white to #D4D8DD */
-    color: #1A2D42; /* Changed from #fff to #1A2D42 */
+    border: 1px #D4D8DD solid;
+    color: #1A2D42;
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .taskAdd:hover {
-    background-color: #2E4156; /* Changed from #6E473B to #2E4156 */
+    background-color: #2E4156;
     transform: translateY(-4px);
     color: #D4D8DD;
     box-shadow: 0 0 10px #AAB7B7, 0 0 20px #AAB7B7, 0 0 30px #1A2D42, 0 0 40px #1A2D42, 0 0 50px #1A2D42;
@@ -202,7 +193,7 @@
 
 .taskAdd:active {
     transform: scale(0.95);
-    background-color: #AAB7B7; /* Changed from #50a5dc to #AAB7B7 */
+    background-color: #AAB7B7;
     box-shadow: 0 0 5px #D4D8DD, 0 0 10px #D4D8DD, 0 0 15px #1A2D42, 0 0 20px #1A2D42, 0 0 25px #1A2D42;
 }
 
@@ -210,40 +201,27 @@
     animation: pulse 1s infinite;
 }
 
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 10px #D4D8DD, 0 0 20px #D4D8DD, 0 0 30px #1A2D42, 0 0 40px #1A2D42, 0 0 50px #1A2D42;
-    }
-    50% {
-        box-shadow: 0 0 20px #D4D8DD, 0 0 30px #D4D8DD, 0 0 40px #1A2D42, 0 0 50px #1A2D42, 0 0 60px #1A2D42;
-    }
-    100% {
-        box-shadow: 0 0 10px #D4D8DD, 0 0 20px #D4D8DD, 0 0 30px #1A2D42, 0 0 40px #1A2D42, 0 0 50px #1A2D42;
-    }
-}
-
 .submit {
     margin-top: 32px;
     font-size: 24px;
     padding: 12px 24px;
-    border: 1px #D4D8DD solid; /* Changed from white to #D4D8DD */
-    color: #1A2D42; /* Changed from #fff to #1A2D42 */
+    border: 1px #D4D8DD solid;
+    color: #1A2D42;
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .submit:hover {
-    color: #D4D8DD; /* Changed from #fff to #1A2D42 */
-    background-color: #2E4156; /* Changed from #50a5dc to #2E4156 */
-    border: 1px #1A2D42 solid; /* Changed from white to #D4D8DD */
-
+    color: #D4D8DD;
+    background-color: #2E4156;
+    border: 1px #1A2D42 solid;
     box-shadow: 0 0 5px #D4D8DD, 0 0 5px #D4D8DD, 0 0 15px #1A2D42, 0 0 20px #1A2D42, 0 0 25px #1A2D42;
 }
 
 .submit:active {
     transform: scale(0.95);
-    background-color: #AAB7B7; /* Changed from #003d82 to #AAB7B7 */
+    background-color: #AAB7B7;
     box-shadow: 0 0 5px #D4D8DD, 0 0 10px #D4D8DD, 0 0 15px #1A2D42, 0 0 20px #1A2D42, 0 0 25px #1A2D42;
 }
 
@@ -263,6 +241,71 @@
     }
 }
 
-.colorsBtn {
-    background-color:#fff ;
+.colorBnt {
+     display: flex;
+     justify-content: space-around;
+}
+
+.colorBntSubmit input[type="color"] {
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #1A2D42;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+}
+
+.colorBnt {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.colorBntSubmit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.colorBntSubmit input[type="color"] {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    z-index: 10;
+    display: block;
+}
+
+.colorBntSubmit img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.colorBntSubmit img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.colorBntSubmit img:active {
+    transform: scale(0.95);
+}
+
+.colorBntSubmit input[type="color"]:hover {
+    transform: scale(1.1);
+}
+
+.colorBntSubmit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.colorBntSubmit label {
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: #1A2D42;
 }

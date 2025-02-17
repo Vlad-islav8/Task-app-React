@@ -48,7 +48,7 @@
     color: #1A2D42; /* Changed from black to #1A2D42 */
     padding: 0;
     border-bottom: 1px solid #D4D8DD; /* Changed from white to #D4D8DD */
-    background-color: #C0C8C2; /* Changed from #6fb7e7 to #C0C8C2 */
+    background-color: rgba(192, 200, 194, 0.2); /* Changed from #6fb7e7 to #C0C8C2 */
     padding: 16px;
     margin-bottom: 16px;
 }
@@ -60,9 +60,10 @@
 }
 
 .taskInfo textarea {
+    resize: none;
     width: 100%;
     height: 90%;
-    background-color: #C0C8C2; /* Changed from #6fb7e7 to #C0C8C2 */
+    background-color: rgba(192, 200, 194, 0.2); /* Changed from #6fb7e7 to #C0C8C2 */
     color: #1A2D42; /* Changed from black to #1A2D42 */
     padding: 0;
 }

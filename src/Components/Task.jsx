@@ -36,16 +36,14 @@ export function Task(props) {
         }
 
     }
-
-
     return (
         <div className={styles.task} style={{backgroundColor: props.Bgcolor}}>
             <div className={styles.taskInfo}>
-                <h2 className={`${notedit}`}>{headValue}</h2>
-                <input value={headValue} onChange={handleHead}  ref={editValue} type="text"  className={`${edit}`}/>
-                <p className={`${notedit}`} >{textValue} {props.id}</p>
+                <h2 className={`${notedit}`} style={{color: props.textColor}}>{headValue}</h2>
+                <input value={headValue} onChange={handleHead}  ref={editValue} type="text"  className={`${edit}`} style={{color: props.textColor}}/>
+                <p className={`${notedit}`} style={{color: props.textColor}}>{textValue} </p>
                 <div className={`${styles.textAria} ${edit}`}>
-                    <textarea value={textValue} onChange={handleText} ref={editValue} name="" id="" ></textarea>
+                    <textarea value={textValue} onChange={handleText} ref={editValue} name="" id="" style={{color: props.textColor}}></textarea>
                 </div>
             </div>
             <div className={styles.taskAction}>

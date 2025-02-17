@@ -13,8 +13,8 @@ let store = {
         observer = callback
     },
 
-    addTask(headValue, textValue, BgColor) {
-        this.state.tasks.push({ head: headValue, text: textValue, id: this.state.tasks.length, Bgcolor: BgColor})
+    addTask(headValue, textValue, BgColor,textColor) {
+        this.state.tasks.push({ head: headValue, text: textValue, id: this.state.tasks.length, Bgcolor: BgColor, textColor: textColor})
         observer(this)
 
     },
